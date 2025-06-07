@@ -124,37 +124,3 @@ global $themeColors;
     </div>
 </section>
 
-<script>
-    document.getElementById('bookingForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-
-        // Collect form data
-        const service = this.service_id.options[this.service_id.selectedIndex].text;
-        const date = this.preferred_date.value;
-        const time = this.preferred_time.value;
-        const firstName = this.first_name.value;
-        const lastName = this.last_name.value;
-        const email = this.email.value;
-        const phone = this.phone.value;
-        const address = this.address.value;
-        const city = this.city.value;
-        const state = this.state.value;
-        const zip = this.zip_code.value;
-        const notes = this.notes.value;
-
-        // Compose WhatsApp message
-        let message = `Booking Request:%0A`;
-        message += `Service: ${service}%0A`;
-        message += `Date: ${date}%0A`;
-        message += `Time: ${time}%0A`;
-        message += `Name: ${firstName} ${lastName}%0A`;
-        message += `Email: ${email}%0A`;
-        message += `Phone: ${phone}%0A`;
-        message += `Address: ${address}, ${city}, ${state}, ${zip}%0A`;
-        if (notes) message += `Notes: ${notes}%0A`;
-
-        // WhatsApp link
-        const waLink = `https://wa.me/447359129002?text=${message}`;
-        window.open(waLink, '_blank');
-    });
-</script>

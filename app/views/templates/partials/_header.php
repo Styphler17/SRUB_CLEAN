@@ -97,22 +97,3 @@ $activeContactMobile = ($currentPage === '/contact') ? $activeMobileClass : '';
 <!-- Overlay for blurring the page background when mobile menu is open -->
 <div id="mobileMenuOverlay" class="hidden fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm z-40"></div>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const mobileMenuButton = document.getElementById('mobileMenuButton');
-        const mobileMenu = document.getElementById('mobileMenu');
-        const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
-
-        if (mobileMenuButton && mobileMenu && mobileMenuOverlay) {
-            mobileMenuButton.addEventListener('click', function() {
-                mobileMenu.classList.toggle('hidden');
-                mobileMenuOverlay.classList.toggle('hidden');
-            });
-
-            mobileMenuOverlay.addEventListener('click', function() {
-                mobileMenu.classList.add('hidden');
-                mobileMenuOverlay.classList.add('hidden');
-            });
-        }
-    });
-</script>
