@@ -130,28 +130,3 @@ if ($connexion) {
     </svg>
 </button>
 
-<!-- JS: Back to Top Button and Animations -->
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const backToTopButton = document.getElementById('backToTop');
-
-        if (backToTopButton) {
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 300) {
-                    backToTopButton.classList.remove('hidden');
-                    backToTopButton.classList.add('block');
-                } else {
-                    backToTopButton.classList.add('hidden');
-                    backToTopButton.classList.remove('block');
-                }
-            });
-
-            backToTopButton.addEventListener('click', () => {
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-            });
-        }
-    });
-</script>
